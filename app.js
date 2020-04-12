@@ -4,7 +4,7 @@ const app=express()
 const hbs= require('hbs')
 const geocode =require('./utils/geocode')
 const forecast= require('./utils/forecast')
-
+console.log("ADDED GIT REPO")
 app.use(express.static(path.join(__dirname,'./public')))
 const partialPath=path.join(__dirname,'./templates/partials')
 const viewPath = path.join(__dirname,'./templates/views')
