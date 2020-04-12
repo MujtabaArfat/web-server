@@ -8,7 +8,7 @@ console.log("ADDED GIT REPO")
 app.use(express.static(path.join(__dirname,'./public')))
 const partialPath=path.join(__dirname,'./templates/partials')
 const viewPath = path.join(__dirname,'./templates/views')
-
+const port = process.env.PORT|| 8000
 app.set('view engine','hbs')
 app.set('views',viewPath)
 hbs.registerPartials(partialPath)
@@ -86,6 +86,6 @@ app.get('*',(req,res)=>{
 
 })
 
-app.listen(8000,()=>{
-    console.log("server at port:8000")
+app.listen(port,()=>{
+    console.log("server at port:"+port)
 })
